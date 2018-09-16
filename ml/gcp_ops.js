@@ -3,6 +3,11 @@ module.exports =  { upload_image_to_google_cloud, map_images_from_gcp_bucket };
 const {Storage} = require('@google-cloud/storage');
 const sharp = require('sharp');
 
+// To authenticate with Google Cloud, ensure that your GOOGLE_APPLICATION_CREDENTIALS
+// environment variable is set properly.
+//
+// See https://cloud.google.com/docs/authentication/getting-started
+
 // Google Cloud Platform project ID
 const projectId = 'picturelo-216522';
 
