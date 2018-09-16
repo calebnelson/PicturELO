@@ -51,6 +51,8 @@ function upload_image_to_google_cloud(do_preprocess, bucket_name, image_readable
 }
 
 function map_images_from_gcp_bucket(bucket_name, image_map_fn) {
+    // Apply map function to bytes of each image from a bucket
+
     let pictures_bucket = storage.bucket(bucket_name);
     let file_count = 0;
     pictures_bucket.getFilesStream()
