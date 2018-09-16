@@ -1,16 +1,19 @@
+module.exports =  { upload_image_to_google_cloud, map_images_from_gcp_bucket };
+
 const {Storage} = require('@google-cloud/storage');
 const sharp = require('sharp');
 
 // Google Cloud Platform project ID
 const projectId = 'picturelo-216522';
 
+// When prepossessing images for upload, resize to these dimensions
+const PREPROCESS_WIDTH = 500;
+const PREPROCESS_HEIGHT = 500;
+
 // Creates a GCP Storage client
 const storage = new Storage({
     projectId: projectId,
 });
-
-const PREPROCESS_WIDTH = 500;
-const PREPROCESS_HEIGHT = 500;
 
 function upload_image_to_google_cloud(do_preprocess, bucket_name, image_readable_stream, image_uuid, on_finish, on_error) {
 
@@ -64,7 +67,6 @@ function map_images_from_gcp_bucket(bucket_name, image_map_fn) {
         });
 }
 
-module.exports =  { upload_image_to_google_cloud, map_images_from_gcp_bucket };
 
 //
 // Examples. Uncomment to Use:
