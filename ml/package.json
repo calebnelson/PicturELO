@@ -1,0 +1,25 @@
+{
+  "name": "picture_elo_ml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^2.0.3",
+    "@tensorflow/tfjs-node": "^0.1.17",
+    "argparse": "^1.0.10",
+    "assert": "^1.4.1",
+    "fs": "0.0.1-security",
+    "https": "^1.0.0",
+    "mongodb": "^3.1.6",
+    "node": "^10.10.0",
+    "progress": "^2.0.0",
+    "sharp": "^0.20.8",
+    "util": "^0.11.0",
+    "zlib": "^1.0.5"
+  }
+}
